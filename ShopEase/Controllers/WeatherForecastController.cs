@@ -18,6 +18,10 @@ namespace ShopEase.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// 获取天气信息
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {

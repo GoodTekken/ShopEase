@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using ShopEase.DB;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,9 @@ builder.Services.AddSwaggerGen(option =>
     //对action的名称进行排序，如果有多个，就可以看到效果
     option.OrderActionsBy(o => o.RelativePath);
 });
+
+//完成数据库的注入，并且初始化
+builder.Services.AddDbContext<ORMContext>();
 
 
 var app = builder.Build();

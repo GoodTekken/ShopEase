@@ -13,6 +13,10 @@ namespace ShopEase.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// 测试主页内容
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "Index")]
         public IActionResult Index()
         {
